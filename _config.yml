@@ -1,5 +1,5 @@
 title:            Bibliotheca Anonoma
-description:      Describe your website.
+description:      Internet Folklife Archival Organization
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://bibanon.github.io
 disqus_shortname: 
@@ -7,9 +7,9 @@ disqus_shortname:
 # Owner/author information
 owner:
   name:           Bibliotheca Anonoma
-  avatar:         bio-photo.jpg
+  avatar:         ba-logo.jpg
   bio:            "An organization tasked with archiving, analyzing, and preserving the many treasures of Internet Folklife."
-  email:          your@email.com
+  email:          sagnessagiel@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:        
   facebook:       
