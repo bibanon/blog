@@ -1,6 +1,6 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
+excerpt: "An organization tasked with archiving, analyzing, and preserving the many treasures of Internet Folklife."
 tags: [Jekyll, theme, responsive, blog, template]
 image:
   feature: sample-image-1.jpg
