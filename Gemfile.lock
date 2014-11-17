@@ -13,6 +13,7 @@ GEM
     colorator (0.1)
     execjs (2.2.2)
     fast-stemmer (1.0.2)
+    ffi (1.9.6)
     ffi (1.9.6-x64-mingw32)
     ffi (1.9.6-x86-mingw32)
     hitimes (1.2.2)
@@ -37,16 +38,16 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.2.1)
       sass (~> 3.2)
-    jekyll-sitemap (0.6.2)
+    jekyll-sitemap (0.6.3)
     jekyll-watch (1.1.2)
       listen (~> 2.7)
     kramdown (1.5.0)
     liquid (2.6.1)
-    listen (2.7.11)
+    listen (2.8.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-    mercenary (0.3.4)
+    mercenary (0.3.5)
     octopress (3.0.0.rc.15)
       jekyll (~> 2.0)
       mercenary (~> 0.3.2)
@@ -66,13 +67,8 @@ GEM
       jekyll (~> 2.0)
     parslet (1.5.0)
       blankslate (~> 2.0)
-<<<<<<< HEAD
-    posix-spawn (0.3.8)
-    pygments.rb (0.5.4)
-=======
     posix-spawn (0.3.9)
     pygments.rb (0.6.0)
->>>>>>> b2b54b8ca70c8186a39257b83aec29151ccfd631
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rb-fsevent (0.9.4)
@@ -80,25 +76,18 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.2.0)
     safe_yaml (1.0.4)
-    sass (3.4.7)
+    sass (3.4.8)
     timers (4.0.1)
       hitimes
     titlecase (0.1.1)
     toml (0.1.2)
       parslet (~> 1.5.0)
-<<<<<<< HEAD
-    tzinfo (0.3.38)
-=======
->>>>>>> b2b54b8ca70c8186a39257b83aec29151ccfd631
     yajl-ruby (1.1.0)
     yajl-ruby (1.1.0-x86-mingw32)
 
 PLATFORMS
-<<<<<<< HEAD
   ruby
-=======
   x64-mingw32
->>>>>>> b2b54b8ca70c8186a39257b83aec29151ccfd631
   x86-mingw32
 
 DEPENDENCIES
