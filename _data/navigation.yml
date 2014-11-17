@@ -1,0 +1,14 @@
+# Site navigation links
+
+- title: About
+  url: /about/
+
+- title: Posts
+  url: /posts/
+
+- title: Theme Setup
+  url: /theme-setup/
+
+- title: BA Wiki
+  url: http://github.com/bibanon/bibanon/wiki
+  external: true
