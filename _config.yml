@@ -30,7 +30,7 @@ owner:
   bio: "An organization tasked with collecting, documenting, and safeguarding the grand legacy of Internet Folklife."
   email: 
   disqus-shortname: 
-  twitter: #BAnonoma
+  twitter: BAnonoma
   facebook: #username
   google:
     plus: #username
@@ -39,7 +39,7 @@ owner:
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: #bibanon
+  github: bibanon
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username
@@ -49,8 +49,10 @@ owner:
   foursquare: #username
   steam: #username
   dribbble: #username
-  youtube: #bibanon
+  youtube: bibanon
   soundcloud: #username
+  weibo: #username
+  flickr: #username
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
