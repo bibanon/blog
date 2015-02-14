@@ -27,10 +27,10 @@ kramdown:
 owner:
   name: Bibliotheca Anonoma
   avatar: ba-logo.png
-  bio: "An organization tasked with archiving, analyzing, and preserving the many treasures of Internet Folklife."
+  bio: "An organization tasked with collecting, documenting, and safeguarding the grand legacy of Internet Folklife."
   email: 
   disqus-shortname: 
-  twitter: #username
+  twitter: #BAnonoma
   facebook: #username
   google:
     plus: #username
@@ -39,7 +39,7 @@ owner:
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: #username
+  github: #bibanon
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username
@@ -49,7 +49,7 @@ owner:
   foursquare: #username
   steam: #username
   dribbble: #username
-  youtube: #username
+  youtube: #bibanon
   soundcloud: #username
 
 include: [".htaccess"]
