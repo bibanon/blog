@@ -33,7 +33,9 @@
     {% include _author-bio.html %}
   </div>
   <div id="index">
-    {{ content }}</br>
+    <div class="article-wrap">
+      {{ content }}</br>
+    </div><!-- /.article-wrap -->
     <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
     {% for post in site.posts limit:5 %}    
     <article>
