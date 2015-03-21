@@ -107,35 +107,35 @@ Sometimes you might only have access to a SQL database backup. To export this da
 
 3. Run the MySQL/MariaDB Secure Installation Script as root, and follow the instructions. Make sure to drop the test database and reload the privilege tables.
 
-    sudo mysql_secure_installation
+       sudo mysql_secure_installation
 
 4. Once you're finished, log in as the root MySQL user.
 
-    mysql -u root -p
+       mysql -u root -p
 
 5. Create a user to manage the databases. For example, I used user: `localuser` with password: `password`.
 
-{% raw %}
+{% highlight mysql %}
 MariaDB [(none)]> CREATE USER 'localuser'@'localhost' IDENTIFIED BY 'password';
 Query OK, 0 rows affected (0.00 sec)
 
 MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'localuser'@'localhost'
     ->            WITH GRANT OPTION;
 Query OK, 0 rows affected (0.00 sec)
-{% endraw %}
+{% endhighlight %}
 
 6. Now create a new database to import the backup into. In this example, we call it `yotsubasociety`. Then quit.
 
-{% raw %}
+{% highlight mysql %}
 MariaDB [(none)]> create database yotsubasociety;
 Query OK, 1 row affected (0.00 sec)
 
 MariaDB [(none)]> quit
-{% endraw %}
+{% endhighlight %}
 
 Now you can import the database. As the `localuser` user, we access the `localhost` SQL server and insert the backup.sql dump into the `yotsubasociety` database.
 
-    mysql -u localuser -p -h localhost yotsubasociety < yotsubasociety352015.sql
+       mysql -u localuser -p -h localhost yotsubasociety < yotsubasociety352015.sql
 
 Finally, here's the command we used to export to Jekyll from the `localhost` SQL Server. Usually, the prefix is `drupal_`.
 
@@ -230,11 +230,11 @@ I guess the only way to insert this right is to do it by hand. That's what we we
 
 First, use the following MySQL command to open the table and grab everything from the `url_alias` table.
 
-{% raw %}
+{% highlight mysql %}
 MariaDB [(none)]> USE yotsubasociety
 Database changed
 MariaDB [yotsubasociety]> SELECT * FROM drupal_url_alias;
-{% endraw %}
+{% endhighlight %}
 
 You will obtain all the `url_alias` from the database:
 
