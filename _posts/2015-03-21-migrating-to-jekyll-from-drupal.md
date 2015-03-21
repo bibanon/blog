@@ -4,9 +4,8 @@ title: Yotsuba Society Website: Migrating to Drupal From Jekyll
 excerpt: "A long story about how we exported data from a rotting Drupal 7.x website, and converted it to Jekyll."
 tags: [blog, yotsubasociety, scripting, website]
 category: basc
-date: 2015-03-21 14:01:45
+modified: 2015-03-21 14:01:45
 ---
-
 [The Bibliotheca Anonoma](http://github.com/bibanon/bibanon/wiki) has put together a brand new, [Jekyll](http://jekyllrb.com/) (and [Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes))-based website for the [Yotsuba Society](http://yotsubasociety.org), which beats the rotting Drupal 7.x CMS it used to use. 
 
 And don't worry, all the old pagelinks and downloads still work (we worked hard to make that possible), so no need to change your bookmarks.
