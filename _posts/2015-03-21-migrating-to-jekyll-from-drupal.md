@@ -62,11 +62,11 @@ Jekyll provides a fully-functional [blog import system](http://import.jekyllrb.c
   * MySQL has been superseded by MariaDB in Linux. Make sure to install `mariadb` and `libmariadbclient-dev` (for Debian)
   * The MySQL gem can be difficult to install on OS X. Make sure to install MySQL, and use this argument instead: `--with-mysql-config=/usr/local/mysql/bin/mysql_config`
 
-```
+{% highlight bash %}
 $ sudo gem install sequel
 $ sudo gem install execjs
 $ sudo gem install mysql --with-mysql-config=/usr/bin/mysql_config
-```
+{% endhighlight %}
 
 4. Use the import commands shown on Jekyll-Import documentation: [Drupal 6](http://import.jekyllrb.com/docs/drupal6/) - [Drupal 7](http://import.jekyllrb.com/docs/drupal7/)
 
@@ -85,7 +85,7 @@ There are two ways to work with the Drupal SQL Database:
 
 For example, here is the command we used to communicate with the Yotsuba Society MySQL Database:
 
-```bash
+{% highlight bash %}
 $ ruby -rubygems -e 'require "jekyll-import";
     JekyllImport::Importers::Drupal7.run({
       "dbname"   => "yotsubasociety",
@@ -94,7 +94,7 @@ $ ruby -rubygems -e 'require "jekyll-import";
       "host"     => "mysql.yotsubasociety.org",
       "prefix"   => "drupal_"
     })'
-```
+{% endhighlight %}
 
 ### Set up a SQL Backup and Export from it
 
@@ -115,24 +115,23 @@ Sometimes you might only have access to a SQL database backup. To export this da
 
 5. Create a user to manage the databases. For example, I used user: `localuser` with password: `password`.
 
-```
+{% raw %}
 MariaDB [(none)]> CREATE USER 'localuser'@'localhost' IDENTIFIED BY 'password';
 Query OK, 0 rows affected (0.00 sec)
 
 MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'localuser'@'localhost'
     ->            WITH GRANT OPTION;
 Query OK, 0 rows affected (0.00 sec)
-
-```
+{% endraw %}
 
 6. Now create a new database to import the backup into. In this example, we call it `yotsubasociety`. Then quit.
 
-```
+{% raw %}
 MariaDB [(none)]> create database yotsubasociety;
 Query OK, 1 row affected (0.00 sec)
 
 MariaDB [(none)]> quit
-```
+{% endraw %}
 
 Now you can import the database. As the `localuser` user, we access the `localhost` SQL server and insert the backup.sql dump into the `yotsubasociety` database.
 
@@ -140,7 +139,7 @@ Now you can import the database. As the `localuser` user, we access the `localho
 
 Finally, here's the command we used to export to Jekyll from the `localhost` SQL Server. Usually, the prefix is `drupal_`.
 
-```bash
+{% highlight bash %}
 $ ruby -rubygems -e 'require "jekyll-import";
     JekyllImport::Importers::Drupal7.run({
       "dbname"   => "yotsubasociety",
@@ -149,7 +148,7 @@ $ ruby -rubygems -e 'require "jekyll-import";
       "host"     => "localhost",
       "prefix"   => "drupal_"
     })'
-```
+{% endhighlight %}
 
 ### Cleaning up the Posts
 
@@ -159,14 +158,14 @@ Unfortunately, [due to bugs in the Drupal import script:](https://github.com/jek
 * The correct slugs aren't imported. In order to maintain compatibility with the old site's links, we need to grab the `url_alias` table as shown in [the Drupal 7 database schema.](https://www.drupal.org/files/er_db_schema_drupal_7.png) 
 * The title is corrupted, as shown below:
 
-```
+{% highlight yaml %}
 ---
 layout: post
 title: !binary |-
   SW50cm9kdWN0aW9uIHRvIFlvdHN1YmEgU29jaWV0eQ==
 created: 1300717398
 ---
-```
+{% endhighlight %}
 
 On the other hand, the correct title (well, lost underscores and Capitals) is always posted in the filename:
 
@@ -180,7 +179,7 @@ Jekyll-Import's Drupal 7 import scripts just aren't perfect or complete, [as thi
 
 I have fixed this bug entirely by forcing the strings into Unicode format (and stripping any preceding and ending whitespace with `strip`):
 
-```
+{% highlight ruby %}
 # Get the relevant fields as a hash, delete empty fields and convert
 # to YAML for the header
 data = {
@@ -189,7 +188,7 @@ data = {
 	'created' => created,
 	'excerpt' => summary
 }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
-```
+{% endhighlight %}
 
 That way, it works even for those pesky titles with stray \xE2 junk that screws everything up.
 
@@ -200,15 +199,17 @@ Before the change went live at the [Jekyll-Import](https://github.com/jekyll/jek
 1. Fork the [Jekyll-Import](https://github.com/jekyll/jekyll-import/) script to your own Github account.
 2. Make your edits to [the Drupal import script](https://github.com/antonizoon/jekyll-import/blob/master/lib/jekyll-import/importers/drupal7.rb#L76) on your own repository. For example, I edited the following to add a `permalink` entry with spaces as underscores, and a better Title section:
 
-          # Get the relevant fields as a hash, delete empty fields and convert
-          # to YAML for the header
-          data = {
-            'layout' => 'post',
-            'title' => '' + title,
-            'permalink' => '/' + title.strip.gsub!(' ', '_'),
-            'created' => created,
-            'excerpt' => summary
-          }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
+{% highlight ruby %}
+# Get the relevant fields as a hash, delete empty fields and convert
+# to YAML for the header
+data = {
+    'layout' => 'post',
+    'title' => '' + title,
+    'permalink' => '/' + title.strip.gsub!(' ', '_'),
+    'created' => created,
+    'excerpt' => summary
+}.delete_if { |k,v| v.nil? || v == ''}.to_yaml
+{% endhighlight %}
 
 3. Now, clone your [forked Jekyll-Import repository](https://github.com/antonizoon/jekyll-import/) and add this to the Gemfile (also remove the `gemspec` line):
 
@@ -229,11 +230,11 @@ I guess the only way to insert this right is to do it by hand. That's what we we
 
 First, use the following MySQL command to open the table and grab everything from the `url_alias` table.
 
-```
+{% raw %}
 MariaDB [(none)]> USE yotsubasociety
 Database changed
 MariaDB [yotsubasociety]> SELECT * FROM drupal_url_alias;
-```
+{% endraw %}
 
 You will obtain all the `url_alias` from the database:
 
@@ -335,11 +336,11 @@ Then, I open every single post dumped, and add `permalink: /page_name_to_use` in
 
 I also use the handy [Jekyll Redirect-from](https://github.com/jekyll/jekyll-redirect-from) gem to make the `/node/##` links work as well:
 
-```
+{% highlight yaml %}
 redirect_from:
   - /node/1/
   - /Page_Name_In_Underscores/
-```
+{% endhighlight %}
 
 > **Note:** Make sure that the links all end in a `/`. This way, a folder with `/node/1/index.html` will be created, instead of `/node/1`, which is just spit at the browser as a downloadable binary. 
 
