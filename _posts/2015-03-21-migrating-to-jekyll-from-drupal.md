@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Yotsuba Society Website: Migrating to Drupal From Jekyll
+title: Yotsuba Society Website - Migrating to Drupal From Jekyll
 excerpt: "A long story about how we exported data from a rotting Drupal 7.x website, and converted it to Jekyll."
 tags: [blog, yotsubasociety, scripting, website]
 category: basc
