@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Minimal Mistakes Theme
-excerpt: "Demo post displaying the various ways of highlighting code in Markdown."
+title: Minimal Mistakes Theme Mods
+excerpt: "A post describing all the special mods I've made to my blog."
 tags: [blog, theme]
 modified: 2014-09-14
 comments: true
@@ -61,6 +61,24 @@ Also comment out the rounded clause from `.article-author-bottom`, which is used
                 max-width: 100px;
 //              .rounded(150px);{% endraw %}
 ~~~
+
+## Disable Book-style Paragraph Indentation
+
+By default, in Minimal Mistakes, [the margin below paragraphs has been removed and indent added to each.](http://mmistakes.github.io/minimal-mistakes/theme-setup/#paragraph-indentation) This is an intentional design decision to mimic the look of type set in a printed book or manuscript.
+
+![](../images/paragraph-indent.png)
+
+However, I wanted to have a more standard blog-style spacing with no indent, as shown below:
+
+![](../images/paragraph-no-indent.png)
+
+To disable the indents and add spacing between paragraphs change the following line in `_sass/variables.scss` from `true !default` to `false` like so.
+
+```css
+$paragraph-indent: false;
+```
+
+* [Source: Minimal Mistakes - Theme Setup: Paragraph Indentation](http://mmistakes.github.io/minimal-mistakes/theme-setup/#paragraph-indentation)
 
 ## Blog Post Gallery
 
