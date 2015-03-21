@@ -103,7 +103,7 @@ Sometimes you might only have access to a SQL database backup. To export this da
 1. Install MySQL/MariaDB. Some Linux distros may have already migrated to MariaDB, which is a drop-in replacement for MySQL.
 2. Start the MySQLd Service. On Debian/Ubuntu:
 
-    sudo service start mysqld
+       sudo service start mysqld
 
 3. Run the MySQL/MariaDB Secure Installation Script as root, and follow the instructions. Make sure to drop the test database and reload the privilege tables.
 
@@ -135,7 +135,9 @@ MariaDB [(none)]> quit
 
 Now you can import the database. As the `localuser` user, we access the `localhost` SQL server and insert the backup.sql dump into the `yotsubasociety` database.
 
-       mysql -u localuser -p -h localhost yotsubasociety < yotsubasociety352015.sql
+{% highlight bash %}
+$ mysql -u localuser -p -h localhost yotsubasociety < yotsubasociety352015.sql
+{% endhighlight %}
 
 Finally, here's the command we used to export to Jekyll from the `localhost` SQL Server. Usually, the prefix is `drupal_`.
 
