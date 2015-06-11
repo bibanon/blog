@@ -14,7 +14,7 @@ One of my favorite Jekyll Octopress themes is [Michael Rose's](http://mademistak
 
 It's a very simple theme that can look amazingly professional with the right header images, is easily customizable, and has a responsive layout that can fit any screen size. Responsive themes are particularly important, now that most people use a combination of smartphone, tablet, and laptop daily.
 
-I've modified it further for my personal use:
+I've modified it further for my personal use :
 
 ## Home Page Mod
 
