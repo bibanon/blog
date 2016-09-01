@@ -33,23 +33,23 @@ I did find this comment in an early archived thread about them (but I can't conf
 > you faggots think too much
 > 
 > and yes i am a normalfag 
-- Anonymous http://archived.moe/r9k/thread/16684407/#16686233
+- Anonymous [http://archived.moe/r9k/thread/16684407/#16686233](http://archived.moe/r9k/thread/16684407/#16686233)
 
 It's also been said that
 > Pretty Princess Points are a way for girls to show that they aren't too different from guys.
-- Anonymous https://lolcow.farm/b/res/77993.html#97000
+- Anonymous [https://lolcow.farm/b/res/77993.html#97000](https://lolcow.farm/b/res/77993.html#97000)
 
 > The joke is that the girl is so neet that she has a parasitic relationship with her parent/legal guardian much like how a lot of male robots leech off their parents. 
-- Anonymous https://desustorage.org/qa/thread/93246/#93803
+- Anonymous [https://desustorage.org/qa/thread/93246/#93803](https://desustorage.org/qa/thread/93246/#93803)
 
 One anon provided his own analysis of them:
 > The person(s) pushing the GBP and current Princess Points set-ups are trying for a long grift, but it is abundantly clear that they don't really know where they're going with it. Their work feels more like a gallery than a meme, but suffers because they're being released far too far apart to maintain the narrative for most viewers, and their staggered production shoots any chance of a cohesive theme.
-- https://desustorage.org/qa/thread/83487/#84105
+- [https://desuarchive.org/qa/thread/83487/#84105](https://desuarchive.org/qa/thread/83487/#84105)
 
 Another on its subversive quality
 
 > There's all sorts of normie memes about calling your girl princess and treating her like a princess etc. It's just /r9k/ is subversive is as fuck so we juxtaposed that sort of simultaneously neotenous and paternal worship of women against the disgusting and psychotic reality of women's lives. It's high art senpai. 
-- https://desustorage.org/r9k/thread/28967890/#28971364
+- [https://desuarchive.org/r9k/thread/28967890/#28971364](https://desuarchive.org/r9k/thread/28967890/#28971364)
 
 But i think the best way to understand and appreciate them it to check them out, so I've included all of them in the archive here!
 
@@ -86,6 +86,6 @@ Not everybody agrees with the meme, some outright reject it as a harmful and lim
 
 ## Links
 
-* The pill booru: http://pill.booru.org/
-* Robot Memes: https://archive.org/details/RobotMemes
-* Pill related comics: https://archive.org/details/PILLCOMICS
+* The pill booru: [http://pill.booru.org/](http://pill.booru.org/)
+* Robot Memes: [https://archive.org/details/RobotMemes](https://archive.org/details/RobotMemes)
+* Pill related comics: [https://archive.org/details/PILLCOMICS](https://archive.org/details/PILLCOMICS)
