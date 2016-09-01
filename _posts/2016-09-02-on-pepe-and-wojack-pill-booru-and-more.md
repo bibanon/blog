@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Pepe & Wojack, Pill Booru and more
-excerpt: "On the evolution of a couple of memes from imageboards: Pepe the frog, wojack and the red pill."
+excerpt: "On the evolution of a couple of memes from imageboards: Pepe the frog, Wojack and the red pill."
 tags: [blog, pill, pepe, wojack]
 modified: 2016-09-02
 comments: true
